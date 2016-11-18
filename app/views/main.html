@@ -1,23 +1,18 @@
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
+  <h1>Hey Now</h1>
   <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
+    Responses below
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
 <div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+  <div ng-repeat="response in main.responses" class="panel panel-default" ng-class="response['I would describe this most as a '] == 'Fear' ? 'panel-warning' : 'panel-info'">
+    <i ng-class="autoScroll ? 'icon-autoscroll' : 'icon-autoscroll-disabled'"></i>
+    <div class="panel-heading">
+      <h3 class="panel-title">{{response["I would describe this most as a "]}} regarding <span class="lowercase">{{response["This is most related to "]}}</span></h3>
+    </div>
+    <div class="panel-body">
+      {{response["What I really want people to know is "]}}
+    </div>
+  </div>
 </div>

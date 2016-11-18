@@ -9,7 +9,7 @@
  */
 angular.module('heyApp')
   .controller('MainCtrl', function (tabletopData) {
-    console.log(tabletopData[0]['Form Responses 1'].elements);
+    this.responses = tabletopData[0]['Form Responses 1'].elements;
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

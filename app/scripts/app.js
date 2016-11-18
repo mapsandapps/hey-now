@@ -36,6 +36,9 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/form', {
+        templateUrl: 'views/form.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
